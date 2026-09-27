@@ -1,10 +1,332 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>A Meat Tenderizer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Meat Tenderizer</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+            radial-gradient(circle at 20% 20%, #4a1010 0%, transparent 35%),
+            radial-gradient(circle at 80% 80%, #321010 0%, transparent 35%),
+            #090909;
+        color: white;
+        min-height: 100vh;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 8%;
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid #333;
+    }
+
+    nav .logo {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    nav a {
+        color: #ddd;
+        text-decoration: none;
+        margin-left: 22px;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+
+    .hero {
+        min-height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hero-inner {
+        max-width: 900px;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border: 1px solid #a43b3b;
+        border-radius: 999px;
+        color: #ffaaaa;
+        background: rgba(120, 20, 20, 0.2);
+        margin-bottom: 22px;
+    }
+
+    h1 {
+        font-size: clamp(50px, 9vw, 105px);
+        line-height: 0.95;
+        margin: 0;
+        letter-spacing: -4px;
+    }
+
+    .red {
+        color: #e84444;
+    }
+
+    .subtitle {
+        max-width: 650px;
+        margin: 28px auto;
+        color: #aaa;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 15px 24px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .primary {
+        background: #e84444;
+        color: white;
+    }
+
+    .secondary {
+        background: #1c1c1c;
+        color: white;
+        border: 1px solid #444;
+    }
+
+    .button:hover {
+        transform: translateY(-3px);
+    }
+
+    section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 80px 20px;
+    }
+
+    .section-title {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    .section-description {
+        color: #999;
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 18px;
+    }
+
+    .card {
+        padding: 25px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid #292929;
+        border-radius: 18px;
+    }
+
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .card p {
+        color: #aaa;
+        line-height: 1.6;
+    }
+
+    .release {
+        background: linear-gradient(
+            135deg,
+            rgba(190,40,40,0.16),
+            rgba(255,255,255,0.03)
+        );
+        border: 1px solid #5e2929;
+        border-radius: 24px;
+        padding: 40px;
+    }
+
+    .release-version {
+        color: #ff8585;
+        font-weight: bold;
+    }
+
+    .release h2 {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    .release p {
+        color: #aaa;
+        line-height: 1.6;
+    }
+
+    footer {
+        text-align: center;
+        color: #666;
+        padding: 50px 20px;
+        border-top: 1px solid #222;
+    }
+</style>
 </head>
+
 <body>
-    <h1>A MEAT TENDERIZER</h1>
-    <p>THE WEBSITE IS REAL NOW :D</p>
+
+<nav>
+    <div class="logo">🥩 AMeatTenderizer</div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#release">Release</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="hero-inner">
+
+        <div class="badge">
+            🥩 THE MEAT TENDERIZER WEBSITE
+        </div>
+
+        <h1>
+            A MEAT<br>
+            <span class="red">TENDERIZER.</span>
+        </h1>
+
+        <p class="subtitle">
+            Hi, I am This GUY.
+            A Meat Tenderizer is a...
+            thing that you tenderize a meat, obviously HAHA.
+        </p>
+
+        <div class="buttons">
+            <a class="button primary" href="#release">
+                Get the package ↓
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/aimanaki142-afk/AMeatTenderizer">
+                View GitHub
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<section id="about">
+
+    <h2 class="section-title">What even is this?</h2>
+
+    <p class="section-description">
+        A totally extremely important website dedicated to me
+        information, meat tenderizer.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🥩 Meat Tenderizer</h3>
+            <p>
+                A thing that you tenderize a meat with.
+                Obviously HAHA.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📄 Who Am I?</h3>
+            <p>
+                Information about who I am,
+                what I believe, and other things.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Important Knowledge</h3>
+            <p>
+                WATER is a right.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="release">
+
+    <div class="release">
+
+        <div class="release-version">
+            LATEST RELEASE • v1.0.0
+        </div>
+
+        <h2>
+            ZIP of what I AM
+            <br>
+            (not that much info)
+        </h2>
+
+        <p>
+            The complete MeOShipOland package.
+            Contains text, images, Meat Tenderizer lore,
+            and absolutely critical information.
+        </p>
+
+        <p>
+            <strong>pleeeaassee extract it 🙏🥺</strong>
+        </p>
+
+        <div class="buttons"
+             style="justify-content:flex-start; margin-top:25px;">
+
+            <a class="button primary"
+               href="https://github.com/aimanaki142-afk/AMeatTenderizer/releases/download/Me-And-I-Am/MeOShipOland.zip">
+                📦 Download MeOShipOland.zip
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/aimanaki142-afk/AMeatTenderizer/releases/tag/Me-And-I-Am">
+                View release
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    AMeatTenderizer • Meat was tenderized here.
+</footer>
+
 </body>
 </html>
